@@ -1,5 +1,5 @@
 
-function formatValue(givenValue: string | number | boolean): string | number | boolean 
+function formatValue (givenValue: string | number | boolean): string | number | boolean 
 
 {
     
@@ -9,9 +9,12 @@ function formatValue(givenValue: string | number | boolean): string | number | b
 
     }
 
-    else if ( typeof givenValue === "number") {
+    else if ( typeof givenValue === "number")
+    {
         return givenValue * 10;
+
     }
+
 
     else if (typeof givenValue === "boolean"){
 
@@ -21,6 +24,7 @@ function formatValue(givenValue: string | number | boolean): string | number | b
 
     return givenValue;
 
+
 }
 
 
@@ -28,7 +32,9 @@ function formatValue(givenValue: string | number | boolean): string | number | b
 
 
 
-function getLength(values: string | any[]): number {
+function getLength (values: string | any[]): number 
+
+{
 
     if (typeof values === "string")
         
@@ -58,12 +64,14 @@ function getLength(values: string | any[]): number {
 class Person{
 
     name: string;
+
     age: number;
 
     constructor(name: string, age: number)
     
     {
         this.name = name;
+
         this.age = age;
     }
 
@@ -71,6 +79,7 @@ class Person{
     
     {
         return `Name: ${this.name}, Age: ${this.age}`;
+
 
     }
 
@@ -84,7 +93,7 @@ class Person{
 
 type itemsAre = { title : string ; rating :  number};
 
-function filterByRating(items_are: itemsAre[]): itemsAre[]
+function filterByRating (items_are: itemsAre[]): itemsAre[]
 
 {
 
@@ -93,7 +102,7 @@ function filterByRating(items_are: itemsAre[]): itemsAre[]
 
 type Users = { id: number; name: string; email: string; isActive: boolean} ;
 
-function filterActiveUsers(users: Users[]): Users[]
+function filterActiveUsers (users: Users[]): Users[]
 
 {
 
@@ -149,13 +158,17 @@ function getUniqueValues(array_one: number[] | string[], array_two: number[] | s
             }
         }
 
-        if (!flag){
+        if (!flag)
+        {
             result.push(values);
         }
     };
 
-    for(const item of array_one){
+    for(const item of array_one)
+    {
+
         addingIfMissing(item);
+
     }
 
     for(const item of array_two){
@@ -163,7 +176,7 @@ function getUniqueValues(array_one: number[] | string[], array_two: number[] | s
     }
 
 
-    return result; 
+    return result ; 
 
 }
 
@@ -171,7 +184,7 @@ function getUniqueValues(array_one: number[] | string[], array_two: number[] | s
 
 
 
-type Product= { name: string; price: number; quantity: number; discout?: number};
+type Product= { name : string; price: number; quantity: number; discout?: number};
 
 
 function calculateTotalPrice(productsare: Product[]): number
